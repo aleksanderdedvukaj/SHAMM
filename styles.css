@@ -14,49 +14,21 @@ html, body {
 }
 
 #language-switcher {
-  margin-top: 8px;
-  margin-left: 190px;
-  font-size: 15.5px;
-  padding: 5px;
-  border-radius: 3px;
+  border-radius: 11px;
   border: 1px solid #ccc;
-  background-color: #f9f9f9;
+  background-color: rgb(232, 232, 232);
   cursor: pointer;
-  color: black;
+  color: rgb(0, 0, 0);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
   font-family: 'Raleway', sans-serif;
   font-weight: 400; /* Light and elegant */
   letter-spacing: 1px;
+  margin: 0;            /* remove large left margin */
+  margin-left: auto;    /* push it to the right naturally */
 }
 
-
-
-
-@media (max-width: 768px) {
-  #language-switcher option {
-    font-size: 0; /* hide text */
-  }
-
-  /* Show flag emoji by using pseudo-element for visual consistency */
-  #language-switcher option::before {
-    content: attr(data-flag);
-    font-size: 20px;
-  }
-
-  /* Make the dropdown smaller and centered for mobile */
-  #language-switcher {
-    width: 50px;
-    padding: 5px;
-    text-align: center;
-    font-size: 15px;
-  }
-}
-
-
-
-
-  .logo {
-    width: 100px;
+.logo {
+  width: 100px;
   max-width: 230px;  /* ✅ stays consistent */
   height: auto;
 }
@@ -64,17 +36,19 @@ html, body {
 nav {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap; /* ✅ allows wrapping if items don't fit */
+  box-sizing: border-box; /* ✅ ensures padding stays inside */
+  overflow: hidden; /* ✅ prevents anything from sticking out */
   align-items: center;
   background-color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  padding: 10px 15px;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.06);
- /*
-  border-radius: 20px;
-  width: 87%;   !!!If I WANT TO. MAKE THE BOARDERS ROUNDED FOR MOBILE INN THE FUTURE!!!
-  margin: auto;
-  margin-top: 5px;
-  */
+  position: relative;   /* anchor for absolute .nav-links */
+  overflow: visible;    /* was hidden -> makes dropdown visible */
+  z-index: 100;         /* sits above background image */
 }
+
 
 .nav-links {
   list-style: none;
@@ -83,7 +57,7 @@ nav {
 }
 
 .nav-links a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-weight: 400; /* Light and elegant */
@@ -108,13 +82,11 @@ nav {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* optional shadow for depth */
 }
 
-/* Optional hover effect */
 .donate-button:hover {
-    background-color: rgb(107, 12, 12);
-    transform: scale(1.05);
-    transition: 0.2s ease;
+  background-color: rgb(107, 12, 12); /* darker red */
+  transform: translateY(-6px) scale(1.08); /* goes slightly up and gets bigger */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* deeper shadow for lift effect */
 }
-
 
 .menu-toggle {
   font-size: 3.2rem;
@@ -123,59 +95,10 @@ nav {
   color: black;
   cursor: pointer;
   display: none;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
 
-  nav {
-    position: relative;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    margin: 0;
-
-    /* --- animation-friendly --- */
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    transition: max-height 1.5s ease, opacity 1.5s ease, padding 1.5s ease;
-    padding: 0;
-    z-index: 10; /* make sure it's above other elements */
-  }
-
-  .nav-links.show {
-    max-height: 500px; /* enough to fit all links */
-    opacity: 1;
-    padding: 20px 0;
-  }
-
-  .nav-links li {
-    padding: 10px 0;
-    transform: translateY(-10px);
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.3s ease;
-  }
-
-  .nav-links.show li {
-    transform: translateY(0);
-    opacity: 1;
-  }
-
-  .nav-links.show li:nth-child(1) { transition-delay: 0.05s; }
-  .nav-links.show li:nth-child(2) { transition-delay: 0.1s; }
-  .nav-links.show li:nth-child(3) { transition-delay: 0.15s; }
-  .nav-links.show li:nth-child(4) { transition-delay: 0.2s; } /* for your 4th link */
-}
 
 @media (min-width: 768px) {
   .logo {
@@ -190,8 +113,6 @@ nav {
     font-size: 28px;
   }
 }
-
-
 
 /* !!!Main!!!*/
 
@@ -257,6 +178,27 @@ nav {
   letter-spacing: 0.8px;
 }
 
+.main-subtitle-about {
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  line-height: 1.5;
+  color: #000000;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.15);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; /* Light and elegant */
+  letter-spacing: 0.8px;
+  margin-bottom: 38px;
+}
+
+.first-two{
+  font-size: 22px;
+  letter-spacing: none;
+  text-shadow: 1px 2px 5px rgba(0,0,0,0.05);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
 .divider {
   border: none;
@@ -318,6 +260,20 @@ footer {
   font-family: 'Raleway', sans-serif;
   font-weight: 300; /* Light and elegant */
   letter-spacing: 1px;
+}
+
+.footer-text-policies{
+  margin: 0;
+  font-size: 18px;
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300; /* Light and elegant */
+  letter-spacing: 1px;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  margin-top: 20px;
 }
   .social-media {
     display: flex;
@@ -524,20 +480,19 @@ footer {
 /* === GALLERY SLIDER (GLITCH-FREE VERSION) === */
 .gallery-slider {
   position: relative;
-  width: 90%;
-  max-width: 900px;
+  width: 100%;
+  max-width: 1400px; 
   margin: 40px auto;
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   background-color: #ffffff;
-  perspective: 1000px; /* ensures flat 2D rendering */
 }
 
 .slide-track {
   position: relative;
   width: 100%;
-  height: 550px;
+  height: 600px;
   transform-style: flat; /* ensure 2D plane only */
 }
 
@@ -586,54 +541,6 @@ footer {
   transform: translateZ(0); /* eliminates 3D rotation flicker */
 }
 
-/* Arrows */
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  z-index: 10;
-  transition: background 0.3s ease;
-}
-.nav:hover { background: rgba(0,0,0,0.7); }
-.nav.prev { left: 15px; }
-.nav.next { right: 15px; }
-
-@media (max-width: 768px) {
-  .slide-track { height: 300px; }
-}
-
-
-/* Arrows */
-.nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.4);
-  color: white;
-  border: none;
-  font-size: 2rem;
-  border-radius: 50%;
-  width: 44px;
-  height: 44px;
-  cursor: pointer;
-  z-index: 5;
-  transition: background 0.3s ease;
-}
-.nav:hover { background: rgba(0,0,0,0.7); }
-.nav.prev { left: 15px; }
-.nav.next { right: 15px; }
-
-@media (max-width: 768px) {
-  .slide-track { height: 300px; }
-}
 
 
 /* !!!NEWS SLIDER Home Page!!!*/
@@ -708,16 +615,8 @@ footer {
 .prev-btn { left: -10px; }
 .next-btn { right: -10px; }
 
-@media (max-width: 900px) {
-  .news-card { flex: 0 0 280px; }
-  .prev-btn { left: -6px; }
-  .next-btn { right: -6px; }
-}
 
 /* !!!About Us Board Members Cards!!! */
-/* ---------- BOARD MEMBERS SECTION ---------- */
-/* ---------- BOARD MEMBERS SECTION ---------- */
-
 /* ---------- BOARD MEMBERS SECTION ---------- */
 .board-section {
   text-align: center;
@@ -789,25 +688,6 @@ footer {
   line-height: 1.6;
 }
 
-/* 📱 Mobile layout: stacked vertically */
-@media (max-width: 768px) {
-  .board-card {
-    flex-direction: column;       /* stack vertically */
-    text-align: center;
-    width: 90%;
-    padding: 25px;
-  }
-
-  .board-photo {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 15px;
-  }
-
-  .board-text {
-    text-align: center;
-  }
-}
 
 
 /* !!!RESPONSIVENESS!!! */
@@ -817,13 +697,15 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(232, 232, 232);
+    background-color: transparent;
+    box-shadow: none; /* 0 4px 12px rgba(0, 0, 0, 0.08) */
     position: relative;
     height: 140px;                    /* slightly thinner nav */
     width: 97%;                       /* leaves white space left/right */
     margin: 0 auto 0 auto;         /* centers it and adds space at top */
     padding: 0 40px;                  /* inner spacing for links/logo */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
 
   .logo {
@@ -854,7 +736,7 @@ footer {
 
   .nav-links a {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: 'Raleway', sans-serif;
     font-size: 17px;
     font-weight: 400;
@@ -894,12 +776,12 @@ footer {
   }
   .main-background {
     height: auto;
-    max-height: 63vh;           /* optional — ensures it doesn’t get too tall */
+    max-height: 99vh;           /* optional — ensures it doesn’t get too tall */
     object-fit: cover;           /* fills the area without distortion */
     object-position: bottom;
-    width: 90%;                  /* make it a bit narrower to show white edges */
+    width: 100%;                  /* make it a bit narrower to show white edges */
     max-width: 1600px;           /* optional – keeps it nice on large monitors */
-    margin: 40px auto;           /* center it and add space above/below */
+    margin: 40px auto;           /* center it and add space above/below 
     border-radius: 14px;         /* rounded corners on all sides */
     display: block;   /* crop from the top like before */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* optional: soft shadow */
@@ -945,6 +827,7 @@ footer {
   text-align: left;
   gap: 25px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .board-card:hover {
@@ -1001,8 +884,6 @@ footer {
 }
 }
 
-
-
 /* === FIX NEWS SLIDER BUTTON POSITIONS === */
 .news-slider {
   position: relative;
@@ -1044,15 +925,6 @@ footer {
 .next-btn { right: -10px; }
 
 /* Optional tweak for mobile so they don't go off screen */
-@media (max-width: 768px) {
-  .prev-btn { left: 5px; }
-  .next-btn { right: 5px; }
-  .prev-btn, .next-btn {
-    width: 38px;
-    height: 38px;
-    font-size: 18px;
-  }
-}
 
 /* === Fade-in on Scroll === */
 .fade-in {
@@ -1066,3 +938,175 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 2.5rem;
+  }
+
+  nav {
+    position: relative;
+    padding: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin: 0;
+
+    /* --- animation-friendly --- */
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1.5s ease, opacity 1.5s ease, padding 1.5s ease;
+    padding: 0;
+    z-index: 10; /* make sure it's above other elements */
+  }
+
+  .nav-links.show {
+    max-height: 500px; /* enough to fit all links */
+    opacity: 1;
+    padding: 20px 0;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.3s ease;
+  }
+
+  .nav-links.show li {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .nav-links.show li:nth-child(1) { transition-delay: 0.05s; }
+  .nav-links.show li:nth-child(2) { transition-delay: 0.1s; }
+  .nav-links.show li:nth-child(3) { transition-delay: 0.15s; }
+  .nav-links.show li:nth-child(4) { transition-delay: 0.2s; } /* for your 4th link */
+
+  .board-card {
+    flex-direction: column;       /* stack vertically */
+    text-align: center;
+    width: 90%;
+    padding: 25px;
+  }
+
+  .board-photo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .board-text {
+    text-align: center;
+  }
+  .slide-track { height: 300px; }
+
+
+  .prev-btn { left: 5px; }
+  .next-btn { right: 5px; }
+
+  .prev-btn, .next-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  #language-switcher option {
+    font-size: 0; /* hide text */
+  }
+
+  /* Show flag emoji by using pseudo-element for visual consistency */
+  #language-switcher option::before {
+    content: attr(data-flag);
+    font-size: 20px;
+  }
+
+  /* Make the dropdown smaller and centered for mobile */
+  #language-switcher {
+    width: auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 13px;
+    margin-left: auto;
+  }
+}
+/* ===============================
+   Policies Page Styling
+   =============================== */
+
+.policy-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  line-height: 1.7;
+}
+
+.policy-container h1 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}
+
+.policy-container section {
+  margin-bottom: 40px;
+}
+
+.policy-container h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: rgb(115, 17, 17); /* Shoqata red */
+  font-family: 'Nunito', sans-serif;
+}
+
+.policy-container p {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.policy-container hr {
+  border: none;
+  height: 1px;
+  background-color: #ddd;
+  margin: 35px 0;
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  .policy-container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .policy-container h1 {
+    font-size: 28px;
+  }
+
+  .policy-container h2 {
+    font-size: 22px;
+  }
+
+  .policy-container p {
+    font-size: 16px;
+  }
+}
+
+
+
+
