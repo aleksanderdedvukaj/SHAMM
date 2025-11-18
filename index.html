@@ -8,21 +8,93 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
-</head>
+  <style>
 
+  .hero-section {
+  width: 100%;
+  height: 85vh;
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.75),   /* dark at the top */
+      rgba(0, 0, 0, 0.35),   /* mid fade */
+      rgba(0, 0, 0, 0.15)    /* fully clear at bottom */
+    ),
+    url("img/home-background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+}
+
+/* Navbar on top of background */
+nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 97%;
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links a {color: rgb(0, 0, 0);}
+  nav{
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .hero-section {
+  width: 100%;
+  height: 55vh;
+  background: 
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.75),   /* dark at the top */
+      rgba(0, 0, 0, 0.35),   /* mid fade */
+      rgba(0, 0, 0, 0.15)    /* fully clear at bottom */
+    ),
+    url("img/home-background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-toggle {
+    margin-bottom: 5px;
+}
+}
+  #language-switcher {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+}
+.menu-toggle {
+    color: rgb(255, 255, 255);
+}
+  </style>
+</head>
 <body>
   <header>
     <nav>
       <a href="index.html">
         <img src="img/shoqata-logo.png" alt="Shoqata Atdhetare Malesia E Madhe" class="logo">
       </a>
+      
+        <select id="language-switcher">
+          <option value="al" selected>🇦🇱 Shqip</option>
+          <option value="en">🇺🇸 English</option>
+        </select>
 
-      <select id="language-switcher">
-        <option value="al" selected>🇦🇱 Shqip</option>
-        <option value="en">🇺🇸 English</option>
-      </select>
-
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+      
 
       <!-- Albanian Navigation -->
       <ul class="nav-links lang al " id="nav-links-al">
@@ -35,7 +107,7 @@
       </ul>
 
       <!-- English Navigation -->
-      <ul class="nav-links lang en" style="display:none;" id="nav-links-en">
+      <ul class="nav-links lang en" id="nav-links-en">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="gallery.html">Gallery</a></li>
@@ -45,9 +117,8 @@
       </ul>
     </nav>
   </header>
-
   <main>
-    <img src="img/home-background.jpg" alt="main background" class="main-background fade-in">
+    <div class="hero-section "></div>
 
     <!-- 🇦🇱 Albanian -->
     <div class="lang al">
@@ -62,9 +133,8 @@
       <h1 class="paragraph-title-gal fade-in">Galeria</h1>
       <hr class="divider-half fade-in">
 
-      <div class="gallery-slider">
-        <button class="nav prev">❮</button>
-        <div class="slide-track fade-in">
+      <div class="gallery-slider fade-in">
+        <div class="slide-track">
           <div class="slide active"><img src="gallery-img/group-pic8.jpg" alt="Photo 1"></div>
           <div class="slide"><img src="gallery-img/lake.jpeg" alt="Photo 2"></div>
           <div class="slide"><img src="gallery-img/skenderbeg.jpg" alt="Photo 3"></div>
@@ -81,7 +151,6 @@
           <div class="slide"><img src="gallery-img/group-pic7.jpg" alt="Photo 14"></div>
           <div class="slide"><img src="gallery-img/dinosa.png" alt="Photo 15"></div>
         </div>
-        <button class="nav next">❯</button>
       </div>
 
       <h1 class="paragraph-title-gal fade-in">Zhvillimi i Komunitetit</h1>
@@ -436,7 +505,7 @@
         Së bashku, mund të krijojmë një të ardhme më të ndritur për brezat që do të vijnë.
       </p>
 
-      <button class="donate-button fade-in">Dhuroni ♡</button>
+      <button class="donate-button fade-in">DHURONI ♡</button>
     </div> <!-- ✅ closes .lang.al -->
 
     <!-- 🇺🇸 English -->
@@ -452,9 +521,8 @@
       <h1 class="paragraph-title-gal fade-in">Gallery</h1>
       <hr class="divider-half fade-in">
 
-      <div class="gallery-slider">
-        <button class="nav prev">❮</button>
-        <div class="slide-track fade-in">
+      <div class="gallery-slider fade-in">
+        <div class="slide-track">
           <div class="slide"><img src="gallery-img/group-pic8.jpg" alt="Photo 1"></div>
           <div class="slide"><img src="gallery-img/lake.jpeg" alt="Photo 2"></div>
           <div class="slide"><img src="gallery-img/skenderbeg.jpg" alt="Photo 3"></div>
@@ -471,7 +539,6 @@
           <div class="slide"><img src="gallery-img/group-pic7.jpg" alt="Photo 14"></div>
           <div class="slide"><img src="gallery-img/dinosa.png" alt="Photo 15"></div>
         </div>
-        <button class="nav next">❯</button>
       </div>
 
       <h1 class="paragraph-title-gal fade-in">Community Development</h1>
@@ -801,6 +868,8 @@
         Të gjitha donacionet që bëhen në mbështetje të Shoqatës janë të zbritshme nga taksat, tërësisht ose pjesërisht,
         brenda Shteteve të Bashkuara të Amerikës.
       </p>
+      <a href="policies.html"><p class="footer-text-policies fade-in">Terms & Conditions | Privacy Policy | Refund Policy</p></a>
+      <a href="our-bylaws.html"><p class="footer-text-policies fade-in">Our By-Laws</p></a>
 
       <div class="social-media fade-in">
         <a target="_blank" href="https://www.facebook.com/malesiaemadhemichigan"><img src="img/facebook.png" alt="Facebook" class="social-icon fade-in"></a>
@@ -827,7 +896,7 @@
         </div>
         <div class="phone">
           <img src="img/phone.png" alt="phone icon" class="contact-icon fade-in">
-          <a href="tel:+11234567890"><p class="contact-us-info-phone fade-in">(123) 456-7890</p></a>
+          <a href="tel:+15861234567"><p class="contact-us-info-phone fade-in">(586) 255-5212</p></a>
         </div>
       </div>
 
@@ -844,6 +913,10 @@
         Shoqata Atdhetare Malesia e Madhe – Michigan is a registered 501(c)(3) nonprofit organization.<br><br>
         All donations made in support of the Association are tax-deductible, in whole or in part, within the United States.
       </p>
+
+      <a href="policies.html"><p class="footer-text-policies fade-in">Terms & Conditions | Privacy Policy | Refund Policy</p></a>
+      <a href="our-bylaws.html"><p class="footer-text-policies fade-in">Our By-Laws</p></a>
+
 
       <div class="social-media fade-in">
         <a target="_blank" href="https://www.facebook.com/malesiaemadhemichigan"><img src="img/facebook.png" alt="Facebook" class="social-icon fade-in"></a>
@@ -870,7 +943,7 @@
         </div>
         <div class="phone">
           <img src="img/phone.png" alt="phone icon" class="contact-icon fade-in">
-          <a href="tel:+11234567890"><p class="contact-us-info-phone fade-in">(123) 456-7890</p></a>
+          <a href="tel:+15861234567"><p class="contact-us-info-phone fade-in">(586) 255-5212</p></a>
         </div>
       </div>
 
@@ -926,8 +999,16 @@ menuToggle.addEventListener("click", (e) => {
   e.stopPropagation();
   const lang = switcher.value;
   const nav = lang === "al" ? alNav : enNav;
+
+  // toggle correct one
   nav.classList.toggle("show");
+
+  // hide the other one
+  if (lang === "al") enNav.classList.remove("show");
+  else alNav.classList.remove("show");
 });
+
+
 
 document.addEventListener("click", (e) => {
   if (!e.target.closest("nav") && !e.target.closest("#menu-toggle")) {
@@ -976,7 +1057,7 @@ function initializeGallerySlider(slider) {
 
   function startAutoSlide() {
     stopAutoSlide();
-    autoSlide = setInterval(next, 5000);
+    autoSlide = setInterval(next, 3500);
   }
   function stopAutoSlide() { if (autoSlide) clearInterval(autoSlide); }
 
