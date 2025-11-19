@@ -227,6 +227,7 @@ nav {
   font-family: 'Raleway', sans-serif;
   font-weight: 500; /* Light and elegant */
   letter-spacing: 1px;
+  margin-top: 100px;
 }
 
 .about-image {
@@ -1108,20 +1109,17 @@ footer {
 }
 
 
-.three-sections {
-  display: flex;
-  width: 100%;
-  height: 370px;
-  margin-top: 40px;
-}
 
+
+.three-sections {
+    height: 800px;
+    display: flex;
+  }
 @media (min-width: 1280px) {
   .three-sections {
     height: 800px;
   }
-}
-
-.section {
+  .section {
   flex: 1;
   background-image: url("img/3part-bckgr.jpg");
   background-size: 300% 100%;   /* IMPORTANT */
@@ -1172,5 +1170,95 @@ footer {
   font-weight: 400; /* Light and elegant */
   margin-top: 15px;
 }
+}
+
+.three-sections{
+  height: 850px;
+}
+  
+  .section {
+  flex: 1;
+  background-image: url("img/3part-bckgr.jpg");
+  background-size: 300% 100%;   /* IMPORTANT */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;   /* move content to the TOP */
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding: 20px;
+
+}
+
+/* POSITIONS */
+.left {
+  background-position: left center;
+  filter: brightness(70%);
+}
+
+.center {
+  background-position: center center;
+  filter: brightness(80%);
+  
+}
+
+.right {
+  background-position: right center;
+  filter: brightness(70%);
+  
+}
+
+
+/* Three Section Background Home Page */
+
+.three-section-title{
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center; /* ✅ centers the title */
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800; /* Light and elegant */
+}
+
+.three-section-paragraph {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-align: center; /* ✅ centers the title */
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; /* Light and elegant */
+  margin-top: 15px;
+}
+@media (max-width: 768px) {
+  
+  .three-sections{
+  height: 350px;
+}
+
+.three-section-title{
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-align: center; /* ✅ centers the title */
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800; /* Light and elegant */
+  display: none;
+}
+
+.three-section-paragraph {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-align: center; /* ✅ centers the title */
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400; /* Light and elegant */
+  margin-top: 15px;
+  display: none;
+}
+}
+
+
 
 
