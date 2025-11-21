@@ -17,37 +17,47 @@
 <body style="background-color: rgb(255, 255, 255);">
     <header>
         <nav>
-            <a href="index.html"><img src="img/shoqata-logo.png" alt="Shoqata Atdhetare Malesia E Madhe" class="logo"></a>
-            <select id="language-switcher">
-                <option value="al" selected>🇦🇱 Shqip</option>
-                <option value="en">🇺🇸 English</option>
-            </select>
-            <button class="menu-toggle" id="menu-toggle">☰</button>
+      <a href="index.html"><img src="img/shoqata-logo.png" alt="Shoqata Atdhetare Malesia E Madhe" class="logo"></a>
+        <select id="language-switcher">
+        <option value="al" selected>🇦🇱 Shqip</option>
+        <option value="en">🇺🇸 English</option>
+      </select>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
 
-            <!-- Albanian Navigation -->
-            <ul class="nav-links lang al active" id="nav-links-al">
-                <li><a href="index.html">Kryefaqja</a></li>
-                <li><a href="about.html">Rreth Nesh</a></li>
-                <li><a href="gallery.html">Galeria</a></li>
-                <li><a href="articles.html">Artikuj</a></li>
-                <li><a href="#donate">Dhuroni</a></li>
-                <li><a href="#contact">Kontaktoni</a></li>
-            </ul>
+      <!-- Albanian Navigation -->
+      <ul class="nav-links lang al active" id="nav-links-al">
+        <li><a href="index.html">Kryefaqja</a></li>
+        <li><a href="about.html">Rreth Nesh</a></li>
+        <li class="more has-dropdown">
+          <a href="#">Më Shumë ▾</a>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="articles.html">Artikuj</a></li>
+            <li><a href="shka.html">SHKA Malësia e Madhe</a></li>
+            <li><a href="donators.html">Donatorët</a></li>
+          </ul>
+        </li>
+        <li><a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new">Dhuroni</a></li>
+        <li><a href="#contact">Kontaktoni</a></li>
+      </ul>
 
-            <!-- English Navigation -->
-            <ul class="nav-links lang en" style="display:none;" id="nav-links-en">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="articles.html">Articles</a></li>
-                <li><a href="#donate">Donate</a></li>
-                <li><a href="#contact">Contact</a></li>
-                
-            </ul>
-
-            <!-- Language Switcher -->
-            
-        </nav>
+      <!-- English Navigation -->
+      <ul class="nav-links lang en" style="display:none;" id="nav-links-en">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="more has-dropdown">
+          <a href="#">More ▾</a>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="shka.html">SHKA Malësia e Madhe</a></li>
+            <li><a href="donators.html">Donators</a></li>
+          </ul>
+        </li>
+        <li><a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new">Donate</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
     </header>
     <main style="background-color: rgb(255, 255, 255);">
         <h1 class="title-gal fade-in">
@@ -57,26 +67,56 @@
 
 
         <div class="gallery">
-            <img src="gallery-img/group-pic8.jpg" alt="Photo 1" class="fade-in">
-            <img src="gallery-img/lake.jpeg" alt="Photo 2" class="fade-in">
-            <img src="gallery-img/skenderbeg.jpg" alt="Photo 3" class="fade-in">
-            <img src="gallery-img/kryetari.JPEG" alt="Photo 4" class="fade-in">
-            <img src="gallery-img/kshilli.jpg" alt="Photo 5" class="fade-in">
-            <img src="gallery-img/lumi_cem.jpg" alt="Photo 6" class="fade-in">
-            <img src="gallery-img/group-pic1.jpg" alt="Photo 7" class="fade-in">
-            <img src="gallery-img/group-pic3.jpg" alt="Photo 8" class="fade-in">
-            <img src="gallery-img/group-pic2.jpg" alt="Photo 9" class="fade-in">
-            <img src="gallery-img/vitoja.jpeg" alt="Photo 10" class="fade-in">
-            <img src="gallery-img/veshje-kombtare1.jpg" alt="Photo 11" class="fade-in">
-            <img src="gallery-img/group-pic5.jpg" alt="Photo 12" class="fade-in">
-            <img src="gallery-img/veshje-kombtare2.jpg" alt="Photo 13" class="fade-in">
-            <img src="gallery-img/group-pic4.jpg" alt="Photo 14" class="fade-in">
-            <img src="gallery-img/group-pic7.jpg" alt="Photo 15" class="fade-in">
-            <img src="gallery-img/dinosa.png" alt="Photo 16" class="fade-in">
-            <img src="gallery-img/group-pic6.jpg" alt="Photo 17" class="fade-in">
+          <img src="gallery/group-pic-1.jpg" alt="Photo 1" class="fade-in">
+          <img src="gallery/group-pic.jpg" alt="Photo 2" class="fade-in">
+          <img src="gallery/group-pic2.jpg" alt="Photo 3" class="fade-in">
+          <img src="gallery/group-pic3.jpg" alt="Photo 4" class="fade-in">
+          <img src="gallery/group-pic5.jpg" alt="Photo 5" class="fade-in">
+          <img src="gallery/group-pic6.jpg" alt="Photo 6" class="fade-in">
+          <img src="gallery/group-pic7.jpg" alt="Photo 7" class="fade-in">
+          <img src="gallery/IMG_0896 2.JPG" alt="Photo 8" class="fade-in">
+          <img src="gallery/-640-0-screenshot-16-1732817124.jpg" alt="Photo 9" class="fade-in">
+          <img src="gallery/IMG_1004.JPG" alt="Photo 10" class="fade-in">
+          <img src="gallery/IMG_1220.JPG" alt="Photo 11" class="fade-in">
+          <img src="gallery/IMG_2103.JPG" alt="Photo 12" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-01-50 2.jpg" alt="Photo 13" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-01-53 3.jpg" alt="Photo 14" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-01-53.jpg" alt="Photo 15" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-32-00.jpg" alt="Photo 16" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-38-16 2.jpg" alt="Photo 17" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-41-14 2.jpg" alt="Photo 18" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-41-48.jpg" alt="Photo 19" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-45-35 4.jpg" alt="Photo 20" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-45-35 7.jpg" alt="Photo 21" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-45-35.jpg" alt="Photo 22" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-45-36 6.jpg" alt="Photo 23" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-45-36 7.jpg" alt="Photo 24" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-51-49 2.jpg" alt="Photo 25" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-51-49 3.jpg" alt="Photo 26" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-55-06.jpg" alt="Photo 27" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-57-52 2.jpg" alt="Photo 28" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-57-52 3.jpg" alt="Photo 29" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-20-59-00.jpg" alt="Photo 30" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-21-23-38 2.jpg" alt="Photo 31" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-21-31-43 2.jpg" alt="Photo 32" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-21-31-43 4.jpg" alt="Photo 33" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-21-31-44.jpg" alt="Photo 34" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-21-40-39.jpg" alt="Photo 35" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-22-10-45 8.jpg" alt="Photo 36" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-22-10-45 9.jpg" alt="Photo 37" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-22-32-36 2.jpg" alt="Photo 38" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-22-32-36.jpg" alt="Photo 39" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-22-35-05.jpg" alt="Photo 40" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-23-12-42 2.jpg" alt="Photo 41" class="fade-in">
+          <img src="gallery/PHOTO-2025-10-15-23-12-43.jpg" alt="Photo 42" class="fade-in">
+          <img src="gallery/Screenshot 2025-11-20 at 12.37.51.png" alt="Photo 43" class="fade-in">
+          <img src="gallery/Screenshot 2025-11-20 at 12.39.00.png" alt="Photo 44" class="fade-in">
+          <img src="gallery/veshje-kombtare1.jpg" alt="Photo 45" class="fade-in">
+          <img src="gallery/veshje-kombtare2.jpg" alt="Photo 46" class="fade-in">
         </div>
-        <button class=" lang en donate-button fade-in">DONATE ♡</button>
-        <button class=" lang al donate-button fade-in">Dhuroni ♡</button>
+
+        <a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new"><button class=" lang en donate-button fade-in">DONATE ♡</button></a>
+        <a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new"><button class=" lang al donate-button fade-in">DHURONI ♡</button></a>
     </main>
 
     <footer id="contact">
