@@ -13,34 +13,44 @@
 <body>
   <header>
     <nav>
-      <a href="index.html">
-        <img src="img/shoqata-logo.png" alt="Shoqata Atdhetare Malesia E Madhe" class="logo">
-      </a>
-
-      <select id="language-switcher">
+      <a href="index.html"><img src="img/shoqata-logo.png" alt="Shoqata Atdhetare Malesia E Madhe" class="logo"></a>
+        <select id="language-switcher">
         <option value="al" selected>🇦🇱 Shqip</option>
         <option value="en">🇺🇸 English</option>
       </select>
-
       <button class="menu-toggle" id="menu-toggle">☰</button>
 
       <!-- Albanian Navigation -->
       <ul class="nav-links lang al active" id="nav-links-al">
         <li><a href="index.html">Kryefaqja</a></li>
         <li><a href="about.html">Rreth Nesh</a></li>
-        <li><a href="gallery.html">Galeria</a></li>
-        <li><a href="articles.html">Artikuj</a></li>
-        <li><a href="#donate">Dhuroni</a></li>
+        <li class="more has-dropdown">
+          <a href="#">Më Shumë ▾</a>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="articles.html">Artikuj</a></li>
+            <li><a href="shka.html">SHKA Malësia e Madhe</a></li>
+            <li><a href="donators.html">Donatorët</a></li>
+          </ul>
+        </li>
+        <li><a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new">Dhuroni</a></li>
         <li><a href="#contact">Kontaktoni</a></li>
       </ul>
 
       <!-- English Navigation -->
-      <ul class="nav-links lang en" id="nav-links-en" style="display:none;">
+      <ul class="nav-links lang en" style="display:none;" id="nav-links-en">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="#donate">Donate</a></li>
+        <li class="more has-dropdown">
+          <a href="#">More ▾</a>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="shka.html">SHKA Malësia e Madhe</a></li>
+            <li><a href="donators.html">Donators</a></li>
+          </ul>
+        </li>
+        <li><a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new">Donate</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -406,7 +416,7 @@
 
     </div>
   </section>
-  <button class=" lang al donate-button fade-in">Dhuroni ♡</button>
+<a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new"><button class="donate-button fade-in">DHURONI ♡</button></a>
 </main>
 <main class="lang en" style="display:none;">
   <section class="news-section">
@@ -724,7 +734,7 @@
 
 
     </div>
-    <button class=" lang en donate-button fade-in">DONATE ♡</button>
+    <a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new"><button class="donate-button fade-in">DONATE ♡</button></a>
   </section>
 </main>
 
