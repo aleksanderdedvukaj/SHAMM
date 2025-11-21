@@ -90,35 +90,44 @@ nav {
 <body>
   <header>
     <nav>
-      <a href="index.html">
-        <img src="img/shoqata-logo.png" alt="Shoqata Atdhetare Malesia E Madhe" class="logo">
-      </a>
-      
+      <a href="index.html"><img src="img/shoqata-logo.png" alt="Shoqata Atdhetare Malesia E Madhe" class="logo"></a>
         <select id="language-switcher">
-          <option value="al" selected>🇦🇱 Shqip</option>
-          <option value="en">🇺🇸 English</option>
-        </select>
-
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-      
+        <option value="al" selected>🇦🇱 Shqip</option>
+        <option value="en">🇺🇸 English</option>
+      </select>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
 
       <!-- Albanian Navigation -->
-      <ul class="nav-links lang al " id="nav-links-al">
+      <ul class="nav-links lang al active" id="nav-links-al">
         <li><a href="index.html">Kryefaqja</a></li>
         <li><a href="about.html">Rreth Nesh</a></li>
-        <li><a href="gallery.html">Galeria</a></li>
-        <li><a href="articles.html">Artikuj</a></li>
-        <li><a href="#donate">Dhuroni</a></li>
+        <li class="more has-dropdown">
+          <a href="#">Më Shumë ▾</a>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Galeria</a></li>
+            <li><a href="articles.html">Artikuj</a></li>
+            <li><a href="shka.html">SHKA Malësia e Madhe</a></li>
+            <li><a href="donators.html">Donatorët</a></li>
+          </ul>
+        </li>
+        <li><a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new">Dhuroni</a></li>
         <li><a href="#contact">Kontaktoni</a></li>
       </ul>
 
       <!-- English Navigation -->
-      <ul class="nav-links lang en" id="nav-links-en">
+      <ul class="nav-links lang en" style="display:none;" id="nav-links-en">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="articles.html">Articles</a></li>
-        <li><a href="#donate">Donate</a></li>
+        <li class="more has-dropdown">
+          <a href="#">More ▾</a>
+          <ul class="dropdown">
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="articles.html">Articles</a></li>
+            <li><a href="shka.html">SHKA Malësia e Madhe</a></li>
+            <li><a href="donators.html">Donators</a></li>
+          </ul>
+        </li>
+        <li><a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new">Donate</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -154,16 +163,18 @@ nav {
       </p>
 
       <!-- unique ID for AL section -->
-      <div class="three-sections fade-in">
+      <div class="three-sections">
         <div class="section left">
-          <h2 class="three-section-title">Antarsimi</h2>
-          <a href=""><p class="three-section-paragraph">Duke kërkuar të bëhesh pjesë e SHAMM? Kliko këtu për të plotësuar aplikacionin. 
+          <h2 class="three-section-title fade-in">Antarsimi</h2>
+          <hr class="divider fade-in">
+          <a href=""><p class="three-section-paragraph fade-in">Duke kërkuar të bëhesh pjesë e SHAMM? Kliko këtu për të plotësuar aplikacionin. 
             Ne gjithmonë kërkojmë anëtarë të rinj për të na ndihmuar të ecim edhe më përpara!</p></a>
         </div>
 
         <div class="section center">
-          <h2 class="three-section-title">Kë Ndihmojmë</h2>
-          <p class="three-section-paragraph" style="text-decoration: none;">Në trojet tona të Malësisë së Madhe, shumë familje përballen ende me kushte të vështira ekonomike, 
+          <h2 class="three-section-title fade-in">Kë Ndihmojmë</h2>
+          <hr class="divider fade-in">
+          <p class="three-section-paragraph fade-in" style="text-decoration: none;">Në trojet tona të Malësisë së Madhe, shumë familje përballen ende me kushte të vështira ekonomike, 
             mungesë të mjeteve bazë dhe sfida të përditshme që prekin jetën e tyre, veçanërisht arsimin dhe shëndetësinë. Megjithatë, pavarësisht 
             sfidave, njerëzit tanë nuk e humbasin kurrë shpresën. Familjet dhe fëmijët tanë të mrekullueshëm ndërtojnë të ardhmen e tyre çdo ditë 
             për një jetë më të mirë dhe një Shqipëri me bashkim. <br><br>Shoqata Atdhetare Malesia e Madhe është pranë tyre — duke ofruar ndihma humanitare, 
@@ -174,12 +185,12 @@ nav {
         </div>
 
         <div class="section right">
-          <h2 class="three-section-title">Donatorët</h2>
-          <p class="three-section-paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo illo quia, quas debitis
-             temporibus quos! Rem modi quibusdam itaque. Praesentium quo molestiae officiis quos! 
-             Cumque ea ipsum dolor pariatur magnam?</p>
+          <h2 class="three-section-title fade-in">Donatorët</h2>
+          <hr class="divider fade-in">
+          <a href="donators.html"><p class="three-section-paragraph fade-in">Kliko këtu për të parë listën e donatorëve të Shoqatës Atdhetare Malësia e Madhe</p></a>
         </div>
       </div>
+      
       <h1 class="paragraph-title-gal fade-in">Ndikimi Ynë</h1>
       <hr class="divider fade-in">
       <p class="main-subtitle fade-in">
@@ -198,7 +209,7 @@ nav {
         Së bashku, mund të krijojmë një të ardhme më të ndritur për brezat që do të vijnë.
       </p>
 
-      <button class="donate-button fade-in">DHURONI ♡</button>
+      <a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new"><button class="donate-button fade-in">DHURONI ♡</button></a>
     </div> <!-- ✅ closes .lang.al -->
 
     <!-- 🇺🇸 English -->
@@ -226,7 +237,7 @@ nav {
         <div class="section left">
           <h2 class="three-section-title">Membership</h2>
           <a href=""><p class="three-section-paragraph">Looking to become a part of SHAMM? Click here to complete the application.
-We are always looking for new members to help us move even further forward!</p></a>
+            We are always looking for new members to help us move even further forward!</p></a>
         </div>
 
         <div class="section center">
@@ -245,13 +256,9 @@ We are always looking for new members to help us move even further forward!</p><
 
         <div class="section right">
           <h2 class="three-section-title">Donators</h2>
-          <p class="three-section-paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo illo quia, quas debitis
-             temporibus quos! Rem modi quibusdam itaque. Praesentium quo molestiae officiis quos! 
-             Cumque ea ipsum dolor pariatur magnam?</p>
+          <a href="donators.html"><p class="three-section-paragraph">Click here to view the list of donors of the Patriotic Association Malësia e Madhe.</p></a>
         </div>
       </div>
-
-
 
       <h1 class="paragraph-title-gal fade-in">Our Impact</h1>
       <hr class="divider fade-in">
@@ -272,7 +279,7 @@ We are always looking for new members to help us move even further forward!</p><
         Together, we can create a brighter future for the generations to come.
       </p>
 
-      <button class="donate-button fade-in">DONATE ♡</button>
+      <a target="_blank" href="https://freedonationkiosk.com:9011/malesiaemadhe/donation/new"><button class="donate-button fade-in">DONATE ♡</button></a>
     </div> <!-- ✅ closes .lang.en -->
   </main>
 
@@ -372,194 +379,85 @@ We are always looking for new members to help us move even further forward!</p><
   </footer>
 
 <script>
-/* =========================================
-   LANGUAGE SWITCHER (Full Fix)
-   ========================================= */
-const switcher = document.getElementById("language-switcher");
-const alNav = document.getElementById("nav-links-al");
-const enNav = document.getElementById("nav-links-en");
+  // --- Language Switcher ---
+  const switcher = document.getElementById("language-switcher");
+  const albanianElements = document.querySelectorAll(".lang.al");
+  const englishElements = document.querySelectorAll(".lang.en");
+  const alNav = document.getElementById("nav-links-al");
+  const enNav = document.getElementById("nav-links-en");
 
-function showLanguage(lang) {
-  // hide all .lang elements (both content + footer + nav)
+  function showLanguage(lang) {
+  // Hide all language elements first
   document.querySelectorAll(".lang").forEach(el => {
     el.style.display = "none";
+    el.classList.remove("active");
   });
 
-  // show selected language
+  // Show only the selected language
   document.querySelectorAll(`.lang.${lang}`).forEach(el => {
-    el.style.display = "block";
+    el.style.display = "";
+    el.classList.add("active");
   });
 
-  // first hide both navs immediately
-alNav.style.display = "none";
-enNav.style.display = "none";
+  // Handle nav visibility cleanly
+  alNav.style.display = lang === "al" ? "flex" : "none";
+  enNav.style.display = lang === "en" ? "flex" : "none";
 
-// then show the correct one
-if (lang === "al") {
-  alNav.style.display = "flex";
-} else {
-  enNav.style.display = "flex";
-}
-
-
-  // save language choice
+  // Save preference
   localStorage.setItem("lang", lang);
 }
 
-/* =========================================
-   NAV MENU (Hamburger)
-   ========================================= */
-const menuToggle = document.getElementById("menu-toggle");
 
-menuToggle.addEventListener("click", (e) => {
-  e.stopPropagation();
-  const lang = switcher.value;
-  const nav = lang === "al" ? alNav : enNav;
-
-  // toggle correct one
-  nav.classList.toggle("show");
-
-  // hide the other one
-  if (lang === "al") enNav.classList.remove("show");
-  else alNav.classList.remove("show");
-});
-
-
-
-document.addEventListener("click", (e) => {
-  if (!e.target.closest("nav") && !e.target.closest("#menu-toggle")) {
-    alNav.classList.remove("show");
-    enNav.classList.remove("show");
-  }
-});
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-  link.addEventListener("click", () => {
-    alNav.classList.remove("show");
-    enNav.classList.remove("show");
-  });
-});
-
-/* =========================================
-   SLIDER UTILITIES
-   ========================================= */
-function isVisible(el) {
-  return !!(el && el.offsetWidth && el.offsetHeight && window.getComputedStyle(el).display !== "none");
-}
-
-/* ---- GALLERY ---- */
-function initializeGallerySlider(slider) {
-  if (!slider || slider.dataset.galleryInitialized === "true") return;
-
-  const slides = Array.from(slider.querySelectorAll(".slide"));
-  const prevBtn = slider.querySelector(".prev");
-  const nextBtn = slider.querySelector(".next");
-  let current = 0;
-  let autoSlide = null;
-
-  function updateSlides() {
-    slides.forEach(s => s.classList.remove("prev", "active", "next"));
-    const total = slides.length;
-    slides[current].classList.add("active");
-    slides[(current - 1 + total) % total].classList.add("prev");
-    slides[(current + 1) % total].classList.add("next");
-  }
-
-  function next() { current = (current + 1) % slides.length; updateSlides(); }
-  function prev() { current = (current - 1 + slides.length) % slides.length; updateSlides(); }
-
-  prevBtn?.addEventListener("click", () => { prev(); startAutoSlide(); });
-  nextBtn?.addEventListener("click", () => { next(); startAutoSlide(); });
-
-  function startAutoSlide() {
-    stopAutoSlide();
-    autoSlide = setInterval(next, 3500);
-  }
-  function stopAutoSlide() { if (autoSlide) clearInterval(autoSlide); }
-
-  slider.addEventListener("mouseenter", stopAutoSlide);
-  slider.addEventListener("mouseleave", startAutoSlide);
-
-  let startX = 0;
-  slider.addEventListener("touchstart", e => (startX = e.touches[0].clientX));
-  slider.addEventListener("touchend", e => {
-    const endX = e.changedTouches[0].clientX;
-    if (startX - endX > 50) next();
-    if (endX - startX > 50) prev();
-    startAutoSlide();
-  });
-
-  updateSlides();
-  startAutoSlide();
-  slider.dataset.galleryInitialized = "true";
-}
-
-/* ---- NEWS ---- */
-function initializeNewsSlider(section) {
-  if (!section || section.dataset.newsInitialized === "true") return;
-  const track = section.querySelector(".news-track");
-  const prevBtn = section.querySelector(".prev-btn");
-  const nextBtn = section.querySelector(".next-btn");
-  const viewport = section.querySelector(".news-slider-viewport");
-  if (!track || !viewport) return;
-
-  let cards = Array.from(track.children);
-  let index = 0;
-  let cardWidth = 0;
-  const gap = 20;
-
-  function measure() {
-    const wasHidden = window.getComputedStyle(section).display === "none";
-    let prevDisplay, prevVisibility, prevPosition;
-    if (wasHidden) {
-      prevDisplay = section.style.display;
-      prevVisibility = section.style.visibility;
-      prevPosition = section.style.position;
-      section.style.display = "block";
-      section.style.visibility = "hidden";
-      section.style.position = "absolute";
-    }
-    cards = Array.from(track.children);
-    const rect = cards[0] ? cards[0].getBoundingClientRect() : { width: 320 };
-    cardWidth = Math.round(rect.width);
-    update();
-    if (wasHidden) {
-      section.style.display = prevDisplay || "";
-      section.style.visibility = prevVisibility || "";
-      section.style.position = prevPosition || "";
-    }
-  }
-
-  function update() { const x = -index * (cardWidth + gap); track.style.transform = `translateX(${x}px)`; }
-  function next() { if (index < cards.length - 1) index++; update(); }
-  function prev() { if (index > 0) index--; update(); }
-
-  nextBtn?.addEventListener("click", next);
-  prevBtn?.addEventListener("click", prev);
-  window.addEventListener("resize", measure);
-  setTimeout(measure, 50);
-  section.dataset.newsInitialized = "true";
-}
-
-/* ---- INIT ---- */
-function initVisibleSliders() {
-  document.querySelectorAll(".gallery-slider").forEach(sl => { if (isVisible(sl)) initializeGallerySlider(sl); });
-  document.querySelectorAll(".news-slider").forEach(sec => { if (isVisible(sec)) initializeNewsSlider(sec); });
-}
-
-window.addEventListener("load", () => {
   const savedLang = localStorage.getItem("lang") || "al";
   switcher.value = savedLang;
   showLanguage(savedLang);
-  initVisibleSliders();
-});
 
-switcher.addEventListener("change", e => {
-  showLanguage(e.target.value);
-  setTimeout(initVisibleSliders, 300);
-});
+  switcher.addEventListener("change", (e) => {
+    showLanguage(e.target.value);
+  });
 
-// === Fade-in Scroll Animation ===
+  // --- Home button fix ---
+  document.querySelectorAll('a[href="index.html"]').forEach(link => {
+    link.addEventListener("click", () => {
+      const currentLang = switcher.value;
+      localStorage.setItem("lang", currentLang);
+    });
+  });
+
+  // --- Hamburger Menu ---
+  const menuToggle = document.getElementById("menu-toggle");
+
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation(); // prevent click from closing immediately
+    const currentLang = switcher.value;
+    const activeNav = currentLang === "al" ? alNav : enNav;
+    const inactiveNav = currentLang === "al" ? enNav : alNav;
+
+    inactiveNav.classList.remove("show");
+    activeNav.classList.toggle("show");
+  });
+
+  // Close menu when a link is clicked
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      alNav.classList.remove("show");
+      enNav.classList.remove("show");
+    });
+  });
+
+  // --- Close when clicking outside ---
+  document.addEventListener("click", (e) => {
+    if (
+      !e.target.closest("nav") && 
+      !e.target.closest("#menu-toggle")
+    ) {
+      alNav.classList.remove("show");
+      enNav.classList.remove("show");
+    }
+  });
+
+
+  // === Fade-in Scroll Animation ===
 const fadeEls = document.querySelectorAll('.fade-in');
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -572,7 +470,6 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.1 }); // 10% visible triggers the fade
 
 fadeEls.forEach(el => observer.observe(el));
-
 </script>
 </body>
 </html>
