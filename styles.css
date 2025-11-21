@@ -974,7 +974,7 @@ footer {
   }
 
   .nav-links.show {
-    max-height: 500px; /* enough to fit all links */
+    max-height: 610px; /* enough to fit all links */
     opacity: 1;
     padding: 20px 0;
   }
@@ -1108,44 +1108,39 @@ footer {
   }
 }
 
-
-
-
+/* === Three Section Background Home Page === */  
 .three-sections {
     height: 800px;
     display: flex;
   }
-@media (min-width: 1280px) {
+
   .three-sections {
     height: 800px;
   }
+
   .section {
   flex: 1;
-  background-image: url("img/3part-bckgr.jpg");
+  /*background-image: url("img/3part-bckgr.jpg");*/
   background-size: 300% 100%;   /* IMPORTANT */
   background-repeat: no-repeat;
   display: flex;
   justify-content: flex-start;   /* move content to the TOP */
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 20px;
-}
 
 /* POSITIONS */
 .left {
   background-position: left center;
-  filter: brightness(70%);
 }
 
 .center {
   background-position: center center;
-  filter: brightness(80%);
 }
 
 .right {
   background-position: right center;
-  filter: brightness(70%);
 }
 
 
@@ -1153,112 +1148,156 @@ footer {
 
 .three-section-title{
   font-size: 2.5rem;
-  color: #ffffff;
+  color: #000000;
   text-align: center; /* ✅ centers the title */
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   font-family: 'Raleway', sans-serif;
-  font-weight: 800; /* Light and elegant */
+  font-weight: 400; /* Light and elegant */
 }
 
 .three-section-paragraph {
   font-size: 18px;
-  color: #ffffff;
+  color: #000000;
   text-decoration: underline;
   text-align: center; /* ✅ centers the title */
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   font-family: 'Raleway', sans-serif;
   font-weight: 400; /* Light and elegant */
   margin-top: 15px;
-}
 }
 
 .three-sections{
   height: 850px;
 }
   
-  .section {
-  flex: 1;
-  background-image: url("img/3part-bckgr.jpg");
-  background-size: 300% 100%;   /* IMPORTANT */
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: flex-start;   /* move content to the TOP */
-  align-items: center;
-  flex-direction: column;
-  color: white;
-  padding: 20px;
+
 
 }
 
-/* POSITIONS */
-.left {
-  background-position: left center;
-  filter: brightness(70%);
-}
-
-.center {
-  background-position: center center;
-  filter: brightness(80%);
-  
-}
-
-.right {
-  background-position: right center;
-  filter: brightness(70%);
-  
-}
-
-
-/* Three Section Background Home Page */
-
-.three-section-title{
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-align: center; /* ✅ centers the title */
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800; /* Light and elegant */
-}
-
-.three-section-paragraph {
-  font-size: 18px;
-  color: #ffffff;
-  text-decoration: underline;
-  text-align: center; /* ✅ centers the title */
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400; /* Light and elegant */
-  margin-top: 15px;
-}
 @media (max-width: 768px) {
-  
-  .three-sections{
-  height: 350px;
+  .three-sections {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* optional: center horizontally */
+    justify-content: center;
+    width: 100%;
+    height: auto;           /* let height adjust automatically */
+    margin-bottom: 40px;    /* add space below it */
+  }
+
+  .section {
+    width: 100%;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+
+  .three-section-title {
+    font-size: 2rem;
+    margin-top: 10px;
+  }
+
+  .three-section-paragraph {
+    font-size: 16px;
+    margin-top: 8px;
+  }
 }
 
-.three-section-title{
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-align: center; /* ✅ centers the title */
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 800; /* Light and elegant */
+
+
+/* ===============================
+   Menu Dropdown Styling
+   =============================== */
+
+/* Container for dropdown */
+.has-dropdown {
+  position: relative;
+}
+
+/* Hidden by default */
+.dropdown {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  background: white;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 9999;
 }
 
-.three-section-paragraph {
-  font-size: 18px;
-  color: #ffffff;
-  text-decoration: underline;
-  text-align: center; /* ✅ centers the title */
-  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400; /* Light and elegant */
-  margin-top: 15px;
-  display: none;
-}
+/* Show on hover (desktop only) */
+@media (min-width: 801px) {
+  .has-dropdown:hover .dropdown {
+    display: block;
+  }
 }
 
+/* Dropdown links */
+.dropdown li a {
+  display: block;
+  padding: 10px 18px;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+}
 
+.dropdown li a:hover {
+  background: #f5f5f5;
+}
 
+@media (max-width: 800px) {
+  /* Remove the dropdown behavior */
+  .dropdown {
+    display: block;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+    background: none;
+  }
+
+  /* Hide the 'More ▾' label but keep the items */
+  .more > a {
+    display: none;
+  }
+
+  /* Make dropdown items look like normal nav links */
+  .dropdown li a {
+    padding: 12px;
+    display: block;
+    background: none;
+    color: black;
+  }
+}
+
+@media (max-width: 800px) {
+
+  /* Center all menu items */
+  .nav-links li,
+  .nav-links li a {
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px 0;
+    width: 100%;
+  }
+
+  /* Dropdown items when shown as normal links */
+  .dropdown li a {
+    text-align: center !important;
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+  }
+
+  /* Remove any leftover indentation */
+  .dropdown {
+    padding-left: 0 !important;
+  }
+}
 
