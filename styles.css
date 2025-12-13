@@ -1301,3 +1301,116 @@ footer {
   }
 }
 
+
+
+
+
+
+
+/* wrapper stays fixed */
+.donate-sticky{
+  position: fixed;
+  right: 27px;
+  bottom: 20px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;     /* 👈 important */
+  gap: 10px;
+
+  width: 140px;             /* matches the button */
+}
+
+
+/* donate button is no longer fixed (wrapper is) */
+.donate-button {
+  width: 140px;
+  height: 50px;
+  background-color: rgb(115, 17, 17);
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.donate-button:hover {
+  background-color: rgb(107, 12, 12);
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* icons under the button */
+.donate-social{
+  display: flex;
+  justify-content: center;  /* 👈 centers under the button */
+  gap: 12px;
+  flex-wrap: wrap;          /* 👈 if phone is tight, it wraps */
+
+  padding: 8px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* make these smaller than footer icons if you want */
+.donate-social .social-icon {
+  width: 22px;
+  height: auto;
+  margin-top: 0;          /* your .social-icon has margin-top: 30px; cancel it */
+  transition: transform 0.15s ease;
+}
+
+.donate-social .social-icon:hover {
+  transform: translateY(-2px) scale(1.08);
+}
+
+@media (min-width: 768px){
+  .donate-sticky{
+    width: 185px;  /* same as your bigger donate button */
+  }
+}
+
+@media (max-width: 768px) {
+  .donate-sticky{
+    right: 7px;
+    bottom: 0px;
+    width: auto;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .donate-button{
+    bottom: 40px;
+  }
+
+  /* icons in ONE horizontal row */
+  .donate-social{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+
+  /* cancel footer spacing */
+  .donate-social .social-icon{
+    width: 22px;
+    margin-top: 0 !important;
+    display: block;
+  }
+
+  /* prevent hover scale from covering icons on phone */
+  .donate-button:hover{
+    transform: none;
+  }
+}
