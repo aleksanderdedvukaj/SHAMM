@@ -1109,13 +1109,8 @@ footer {
 }
 
 /* === Three Section Background Home Page === */  
-.three-sections {
-    height: 800px;
-    display: flex;
-  }
-
   .three-sections {
-    height: 800px;
+    display: flex;
   }
 
   .section {
@@ -1165,14 +1160,10 @@ footer {
   font-weight: 400; /* Light and elegant */
   margin-top: 15px;
 }
-
 .three-sections{
   height: 850px;
 }
-  
-
-
-}
+  }
 
 @media (max-width: 768px) {
   .three-sections {
@@ -1307,6 +1298,9 @@ footer {
 
 
 
+
+
+
 /* wrapper stays fixed */
 .donate-sticky{
   position: fixed;
@@ -1414,3 +1408,89 @@ footer {
     transform: none;
   }
 }
+
+
+
+/* CHRISTMAS VIDEO */
+/* CHRISTMAS VIDEO */
+/* CHRISTMAS VIDEO */
+/* CHRISTMAS VIDEO */
+
+.main-content-index{
+  display: flex;
+}
+.main-content-mission-vision{
+  width: 56%
+}
+
+
+
+@media (max-width: 768px) {
+  .main-content-index{
+    flex-direction: column;
+  }
+  .main-content-mission-vision{
+  width: 100%
+}
+.mission-vision-video{
+  height: 55vh;
+}
+}
+
+@media (min-width: 768px) {
+  .main-content-mission-vision {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .text-box {
+    order: 1;   /* TEXT first (left) */
+    flex: 1;
+  }
+
+  .main-content-video {
+    order: 2;   /* VIDEO second (right) */
+    flex: 1;
+  }
+}
+
+
+
+/* HOME PAGE EVENTS */
+.events-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.events-list li a {
+  display: block;
+  padding: 12px 16px;
+  background: rgb(240, 240, 240);
+  text-decoration: none;
+  color: rgb(127, 127, 127);
+  border-left: 4px solid #8b0000;
+  transition: background 0.2s ease;
+}
+
+.events-list li a:hover {
+  background: #f4f4f4;
+}
+.events-list{
+  width: 100%;
+  max-width: 85%;          /* 👈 adjust: 90–95% */
+  padding-left: 0;
+  margin-left: 0;          /* stays left-aligned */
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+
+
